@@ -9,8 +9,8 @@
                 </div>
                 <div class="col text-right">
                     <a href="{{ url('pacientes/create') }}" class="btn btn-sm btn-primary">Nuevo paciente</a>
-                </div> 
-            </div>
+                </div>
+            </div> 
         </div>
         <div class="card-body">
             @if (session('notification'))
@@ -55,6 +55,9 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+        <div class="card-body">
+            {{ $patients->links() }}
         </div>
     </div>
 @endsection
